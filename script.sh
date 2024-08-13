@@ -7,3 +7,4 @@ if [ -d $dir ]; then
 else
     mkdir $dir
     echo "Directory backup Created"
+fi
