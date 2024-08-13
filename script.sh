@@ -1,4 +1,9 @@
 #!/bin/bash
 
 dir="./backup"
-mkdir -p "$dir"
+
+if [ -d $dir ]; then
+    echo "The directory exists"
+else
+    mkdir $dir
+    echo "Directory backup Created"
