@@ -43,7 +43,7 @@ fi
 
 }
 
-exist "script.sh"
+exists "script.sh"
 write "script.sh"
 read "script.sh"
 execute "script.sh"
