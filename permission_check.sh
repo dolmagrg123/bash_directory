@@ -1,5 +1,6 @@
 #!/bin/bash
 
+FILE="$1"
 if [ -e "$FILE" ] 
 then
    echo "File Exists"
@@ -41,7 +42,6 @@ else
 fi
 
 }
-
 
 write "script.sh"
 read "script.sh"
