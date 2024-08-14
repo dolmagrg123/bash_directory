@@ -5,7 +5,7 @@ file_exists(){
 FILE="$1"
 if [ -e "$FILE" ] 
 then
-   echo " $FILE File Exists"
+   echo "$FILE File Exists"
 else
    echo "$FILE File Does not Exists"
    exit 1
