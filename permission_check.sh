@@ -1,4 +1,11 @@
 #!/bin/bash
+#-w FILE : FILE exists and write permission is granted
+# -x FILE : FILE exists and execute (or search) permission is granted
+# -d FILE : FILE exists and is a directory
+# -e FILE : FILE exists
+# -f FILE : FILE exists and is a regular file
+# -r FILE : FILE exists and read permission is granted
+# -s FILE : FILE exists and has a size greater than zero
 
 #check if file exists
 file_exists(){
@@ -11,6 +18,7 @@ else
    exit 1
 fi
 }
+
 writable(){
 
 FILE="$1"
