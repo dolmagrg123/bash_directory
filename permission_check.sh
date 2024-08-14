@@ -1,5 +1,5 @@
 #!/bin/bash
-
+exists(){
 FILE="$1"
 if [ -e "$FILE" ] 
 then
@@ -43,6 +43,7 @@ fi
 
 }
 
+exist "script.sh"
 write "script.sh"
 read "script.sh"
 execute "script.sh"
