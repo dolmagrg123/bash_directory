@@ -1,49 +1,51 @@
 #!/bin/bash
-exists(){
+
+#check if file exists
+file_exists(){
 FILE="$1"
 if [ -e "$FILE" ] 
 then
-   echo "File Exists"
+   echo " $FILE File Exists"
 else
-   echo "File Does not Exists"
+   echo "$FILE File Does not Exists"
    exit 1
 fi
 }
-write(){
+writable(){
 
 FILE="$1"
 if [ -w "$FILE" ] 
 then
-   echo "Writable"
+   echo "$FILE is Writable"
 else
-   echo "Not writable"
+   echo "$FILE is Not writable"
 fi
 }
 
-read(){
+readable(){
 
 FILE="$1"
 if [ -r "$FILE" ] 
 then
-   echo "Readable"
+   echo "$FILE is Readable"
 else
-   echo "Not Readble"
+   echo "$FILE is Not Readble"
 fi
 }
 
-execute(){
+executable(){
 
 FILE="$1"
 if [ -x "$FILE" ] 
 then
-   echo "Executable"
+   echo "$FILE is Executable"
 else
-   echo "Not Executable"
+   echo "$FILE is Not Executable"
 fi
 
 }
 
-exists "script.sh"
-write "script.sh"
-read "script.sh"
-execute "script.sh"
+file_exists "script.sh"
+writable "script.sh"
+readable "script.sh"
+executable "script.sh"
