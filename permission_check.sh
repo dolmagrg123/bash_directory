@@ -1,5 +1,13 @@
 #!/bin/bash
 
+if [ -e "$FILE" ] 
+then
+   echo "File Exists"
+else
+   echo "File Does not Exists"
+   exit 1
+fi
+}
 write(){
 
 FILE="$1"
