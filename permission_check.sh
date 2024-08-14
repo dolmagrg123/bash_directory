@@ -1,9 +1,5 @@
 #!/bin/bash
 
-
- 
-[ $# -eq 0 ] && exit 1
- 
 write(){
 
 FILE="$1"
