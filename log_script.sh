@@ -1,9 +1,11 @@
 #!/bin/bash
 
+# grep for 404 error, then print the fist column which has some numbers and ip, cut to select only the ips , Sorts the IP addresses, uniq Counts the number of occurrences of each unique IP address, awk  Formats the output to show each IP address and its count in a readable format.
+grep " 404 " web-server-access-logs.log | awk '{print $1}' | cut -d'"' -f2 | sort | uniq -c | awk '{print "The IP " $2 " is repeated " $1 " times"}'
+
+
 # grep for 404 error, then print the fist column which has some numbers and ip, cut to select only the ips
 grep " 404 " web-server-access-logs.log | awk '{ print $1 }' | cut -d'"' -f2 > hello.txt
-
-
 
 # Declare an associative array to store counts
 declare -A ip_counts
