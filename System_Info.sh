@@ -26,3 +26,5 @@ menu() {
     echo "Please choose from below menu"
     echo "1.IP Addresses\n2.Current User\n3. CPU Information\n4. Memory Information\n5. Top 5 Memory Processes\n6. Top 5 CPU Processes\n7. Network Connectivity"
 }
+
+menu
