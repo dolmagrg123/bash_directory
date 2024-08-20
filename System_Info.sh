@@ -24,8 +24,7 @@
 menu() {
 
     echo "Please choose from below menu"
-    echo -e "1.IP Addresses\n2.Current User\n3. CPU Information\n4. Memory Information\n5. Top 5 Memory Processes\n6. Top 5 CPU Processes\n7. Network Connectivity"
-
+    echo -e "1.IP Addresses\n2.Current User\n3. CPU Information\n4. Memory Information\n5. Top 5 Memory Processes\n6. Top 5 CPU Processes\n7. Network Connectivity\n Press Any Key to exit"
     read -p "Enter your choice from (1-7): " choice
 
     if [ $choice == 1 ];then
@@ -42,6 +41,9 @@ menu() {
         cpu_proccesses
     elif [ $choice == 7];then
         network_connectivity
+    else
+        exit 0
+    fi
 
 }
 
