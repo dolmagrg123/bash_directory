@@ -48,8 +48,11 @@ menu() {
 }
 
 ip_address(){
-    IP="hostname -I"
-   echo "Your IP address is $IP"
+    private_ip=$( hostname -I )
+    public_ip=$( curl ifconfig.me )
+    echo "Your Private IP address is $private_ip"
+    echo "Your Public IP address is $public_ip"
+
 }
 current_user(){
 
