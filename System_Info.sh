@@ -29,20 +29,20 @@ menu() {
 
     if [ "$choice" == "1" ];then
         ip_address
-    elif [ "$choice" == "2" ];then
-        current_user
-    elif [ "$choice" == "3" ];then
-        cpu_information
-    elif [ "$choice" == "4" ];then
-        memory_information
-    elif [ "$choice" == "5" ];then
-        memory_processes
-    elif [ "$choice" == "6" ];then
-        cpu_proccesses
-    elif [ "$choice" == "7" ];then
-        network_connectivity
-    else
-        exit 0
+    # elif [ "$choice" == "2" ];then
+    #     current_user
+    # elif [ "$choice" == "3" ];then
+    #     cpu_information
+    # elif [ "$choice" == "4" ];then
+    #     memory_information
+    # elif [ "$choice" == "5" ];then
+    #     memory_processes
+    # elif [ "$choice" == "6" ];then
+    #     cpu_proccesses
+    # elif [ "$choice" == "7" ];then
+    #     network_connectivity
+    # else
+    #     exit 0
     fi
 
 }
@@ -54,24 +54,24 @@ ip_address(){
     echo "Your Public IP address is $public_ip"
 
 }
-current_user(){
+# current_user(){
 
-}
-cpu_information(){
+# }
+# cpu_information(){
 
-}
-memory_information(){
+# }
+# memory_information(){
 
-}
-memory_processes(){
+# }
+# memory_processes(){
 
-}
-cpu_proccesses(){
+# }
+# cpu_proccesses(){
 
-}
-network_connectivity(){
+# }
+# network_connectivity(){
 
-}
+# }
 
 menu
 
