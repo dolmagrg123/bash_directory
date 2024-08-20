@@ -25,6 +25,46 @@ menu() {
 
     echo "Please choose from below menu"
     echo -e "1.IP Addresses\n2.Current User\n3. CPU Information\n4. Memory Information\n5. Top 5 Memory Processes\n6. Top 5 CPU Processes\n7. Network Connectivity"
+
+    read -p "Enter your choice from (1-7): " choice
+
+    if [ $choice == 1 ];then
+        ip_address
+    elif [ $choice == 2 ];then
+        current_user
+    elif [ $choice == 3 ];then
+        cpu_information
+    elif [ $choice == 4 ];then
+        memory_information
+    elif [ $choice == 5 ];then
+        memory_processes
+    elif [ $choice == 6 ];then
+        cpu_proccesses
+    elif [ $choice == 7];then
+        network_connectivity
+
 }
 
 menu
+
+ip_address(){
+
+}
+current_user(){
+
+}
+cpu_information(){
+
+}
+memory_information(){
+
+}
+memory_processes(){
+
+}
+cpu_proccesses(){
+
+}
+network_connectivity(){
+
+}
