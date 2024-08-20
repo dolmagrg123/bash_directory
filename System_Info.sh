@@ -56,7 +56,7 @@ ip_address(){
 }
 current_user(){
     current_user=$( whoami )
-    echo "$current_user"
+    echo "You are $current_user"
 
 }
 cpu_information(){
