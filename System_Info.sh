@@ -49,7 +49,7 @@ menu() {
 
 ip_address(){
     private_ip=$( hostname -I )
-    public_ip=$( curl ifconfig.me )
+    public_ip=$( wget -qO- ifconfig.me )
     echo "Your Private IP address is $private_ip"
     echo "Your Public IP address is $public_ip"
 
