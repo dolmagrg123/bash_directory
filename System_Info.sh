@@ -1,4 +1,5 @@
-# As an Entry Level DevOps Engineer, you are tasked with creating a user-friendly script that can be run from the terminal for a user to easily get important system information.
+# As an Entry Level DevOps Engineer, you are tasked with creating a user-friendly script that can
+#  be run from the terminal for a user to easily get important system information.
 
 # Create a script that will present the following menu to a user to choose from:
 
@@ -19,3 +20,9 @@
 # 7. Network Connectivity #ask user for a website or IP address to connect to first and then produce a statement regarding the network connection, ex answer: "It took 7ms to connect to www.google.com and there was 0% data packet loss."
 
 # The script should continue to ask the user to choose from the menu until they want to exit.
+
+menu() {
+
+    echo "Please choose from below menu"
+    echo "1.IP Addresses\n2.Current User\n3. CPU Information\n4. Memory Information\n5. Top 5 Memory Processes\n6. Top 5 CPU Processes\n7. Network Connectivity"
+}
