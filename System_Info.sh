@@ -59,21 +59,21 @@ current_user(){
     echo "You are $current_user"
 
 }
-cpu_information(){
+# cpu_information(){
 
-}
-memory_information(){
+# }
+# memory_information(){
 
-}
-memory_processes(){
+# }
+# memory_processes(){
 
-}
-cpu_proccesses(){
+# }
+# cpu_proccesses(){
 
-}
-network_connectivity(){
+# }
+# network_connectivity(){
 
-}
+# }
 
 menu
 
