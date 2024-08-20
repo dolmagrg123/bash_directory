@@ -47,10 +47,8 @@ menu() {
 
 }
 
-menu
-
 ip_address(){
-
+    ip addr show $(ip route | awk '/default/ { print $5 }') | grep "inet" | head -n 1 | awk '/inet/ {print $2}' | cut -d'/' -f1
 }
 current_user(){
 
@@ -70,3 +68,6 @@ cpu_proccesses(){
 network_connectivity(){
 
 }
+
+menu
+
