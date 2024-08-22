@@ -65,15 +65,15 @@ investigate() {
     echo "You start investigating the sound."
     echo "You see a man, just as surprised as you are."
     echo -e "Will you\n1. Ask him why he was there\n2. Trust him to take you back to the palace\n3. Call for guards and arrest him\n"
-    read -p "Choose your option (1/2/3): " choice3
+    read -p "Choose your option (1/2/3): " choice
 
-    if [ "$choice3" -eq 1 ]; then
+    if [ "$choice" -eq 1 ]; then
         ask_about_figure
-    elif [ "$choice3" -eq 2 ]; then
+    elif [ "$choice" -eq 2 ]; then
         echo "You start walking towards the palace"
         echo "On the way you see a hidden path"
         explore_path
-    elif [ "$choice3" -eq 3 ]; then
+    elif [ "$choice" -eq 3 ]; then
         arrest
     else
         echo "Invalid choice, try again."
@@ -84,11 +84,11 @@ investigate() {
 ask_about_figure() {
     echo "You ask the man why he was there. He explains he was just on his way to home. He asks 'Who are you?' "
     echo -e "Do you:\n1. Apologize for the misunderstanding\n2. Demand further explanation\n"
-    read -p "Choose your option (1/2): " choice3
+    read -p "Choose your option (1/2): " choice
 
-    if [ "$choice3" -eq 1 ]; then
+    if [ "$choice" -eq 1 ]; then
         apologize_confrontation
-    elif [ "$choice3" -eq 2 ]; then
+    elif [ "$choice" -eq 2 ]; then
         demand_explanation
     else
         echo "Invalid choice, try again."
@@ -99,11 +99,11 @@ ask_about_figure() {
 demand_explanation() {
     echo "You demand further explanation. The man explains he was on a mission and meant no harm."
     echo -e "Do you:\n1. Apologize for the confrontation\n2. Offer to help him find his way\n"
-    read -p "Choose your option (1/2): " choice3
+    read -p "Choose your option (1/2): " choice
 
-    if [ "$choice3" -eq 1 ]; then
+    if [ "$choice" -eq 1 ]; then
         apologize_confrontation
-    elif [ "$choice3" -eq 2 ]; then
+    elif [ "$choice" -eq 2 ]; then
         offer_help
     else
         echo "Invalid choice, try again."
@@ -115,11 +115,11 @@ apologize_confrontation() {
     echo "You apologize for the confrontation. The man accepts and shares his story."
     echo "As the two of you walk further away from the place, you find a hidden grove with a beautiful, glowing pond."
     echo -e "Do you\n1. Investigate the pond\n2. Return to the palace\n"
-    read -p "Choose your option (1/2): " choice3
+    read -p "Choose your option (1/2): " choice
 
-    if [ "$choice3" -eq 1 ]; then
+    if [ "$choice" -eq 1 ]; then
         investigate_pond
-    elif [ "$choice3" -eq 2 ]; then
+    elif [ "$choice" -eq 2 ]; then
         return_to_palace
     else
         echo "Invalid choice, try again."
@@ -129,8 +129,7 @@ apologize_confrontation() {
 
 offer_help() {
     echo "You offer to help him find his way. He appreciates it and shares more about his mission."
-    echo "As you spend time together, you realize you have fallen in love."
-    echo "You return to the palace together and live a happily ever after."
+    love_story
 }
 
 arrest() {
@@ -145,11 +144,11 @@ run() {
     echo "The sound is getting closer to you."
     echo "Suddenly, you trip and fall, and the figure catches up to you."
     echo -e "Do you\n1. Scream for help\n2. Try to fight the figure\n"
-    read -p "Choose your option (1/2): " choice3
+    read -p "Choose your option (1/2): " choice
 
-    if [ "$choice3" -eq 1 ]; then
+    if [ "$choice" -eq 1 ]; then
         scream_for_help
-    elif [ "$choice3" -eq 2 ]; then
+    elif [ "$choice" -eq 2 ]; then
         fight
     else
         echo "Invalid choice, try again."
@@ -171,11 +170,11 @@ ignore() {
     echo "You ignore the sound and continue your walk."
     echo "As you walk further away from the place, you find a hidden grove with a beautiful, glowing pond."
     echo -e "Do you\n1. Investigate the pond\n2. Return to the palace\n"
-    read -p "Choose your option (1/2): " choice3
+    read -p "Choose your option (1/2): " choice
 
-    if [ "$choice3" -eq 1 ]; then
+    if [ "$choice" -eq 1 ]; then
         investigate_pond
-    elif [ "$choice3" -eq 2 ]; then
+    elif [ "$choice" -eq 2 ]; then
         return_to_palace
     else
         echo "Invalid choice, try again."
@@ -186,11 +185,11 @@ ignore() {
 investigate_pond() {
     echo "You decide to investigate the pond."
     echo -e "Do you:\n1. Touch the water\n2. Look for creatures in the pond\n"
-    read -p "Choose your option (1/2): " choice3
+    read -p "Choose your option (1/2): " choice
 
-    if [ "$choice3" -eq 1 ]; then
+    if [ "$choice" -eq 1 ]; then
         touch_water
-    elif [ "$choice3" -eq 2 ]; then
+    elif [ "$choice" -eq 2 ]; then
         look_for_creatures
     else
         echo "Invalid choice, try again."
@@ -201,11 +200,11 @@ investigate_pond() {
 touch_water() {
     echo "You touch the water, and it feels strangely warm and calming."
     echo -e "Do you:\n1. Dip your feet in the pond\n2. Look for something floating in the pond\n"
-    read -p "Choose your option (1/2): " choice3
+    read -p "Choose your option (1/2): " choice
 
-    if [ "$choice3" -eq 1 ]; then
+    if [ "$choice" -eq 1 ]; then
         dip_feet
-    elif [ "$choice3" -eq 2 ]; then
+    elif [ "$choice" -eq 2 ]; then
         look_floating
     else
         echo "Invalid choice, try again."
@@ -222,11 +221,11 @@ dip_feet(){
 look_for_creatures() {
     echo "You look for hidden creatures around the pond."
     echo -e "You see some unusual fish swimming. Do you:\n1.Try to catch a fish\n2.Observe the fish from a distance\n"
-    read -p "Choose an option (1/2): " choice3
+    read -p "Choose an option (1/2): " choice
 
-    if [ "$choice3" -eq 1 ]; then
+    if [ "$choice" -eq 1 ]; then
         catch_fish
-    elif [ "$choice3" -eq 2 ]; then
+    elif [ "$choice" -eq 2 ]; then
         observe_fish
     else
         echo "Invalid choice, try again."
@@ -237,11 +236,12 @@ look_for_creatures() {
 catch_fish() {
     echo "You attempt to catch a fish but only manage to scare it away."
     echo -e "Do you:\n1. Try again\n2. Decide to leave the pond\n"
-    read -p "Choose an option (1/2): " choice3
+    read -p "Choose an option (1/2): " choice
 
-    if [ "$choice3" -eq 1 ]; then
-        try_again
-    elif [ "$choice3" -eq 2 ]; then
+    if [ "$choice" -eq 1 ]; then
+        echo "You finally caught the fish"
+        observe_fish
+    elif [ "$choice" -eq 2 ]; then
         leave_pond
     else
         echo "Invalid choice, try again."
@@ -274,11 +274,11 @@ return_to_palace() {
 look_floating() {
     echo "You look for something floating in the pond and find an ancient artifact."
     echo -e "Do you:\n1. Retrieve the artifact\n2. Leave it and walk away\n"
-    read -p "Choose an option (1/2): " choice3
+    read -p "Choose an option (1/2): " choice
 
-    if [ "$choice3" -eq 1 ]; then
+    if [ "$choice" -eq 1 ]; then
         retrieve_object
-    elif [ "$choice3" -eq 2 ]; then
+    elif [ "$choice" -eq 2 ]; then
         walk_away
     else
         echo "Invalid choice, try again."
@@ -300,11 +300,11 @@ walk_away() {
 explore_path() {
     echo "You explore the hidden path and discover a secluded area with a beautiful view."
     echo -e "Do you:\n1. Sit and enjoy the view\n2. Continue exploring\n"
-    read -p "Choose an option (1/2): " choice3
+    read -p "Choose an option (1/2): " choice
 
-    if [ "$choice3" -eq 1 ]; then
+    if [ "$choice" -eq 1 ]; then
         enjoy_view
-    elif [ "$choice3" -eq 2 ]; then
+    elif [ "$choice" -eq 2 ]; then
         continue_exploring
     else
         echo "Invalid choice, try again."
@@ -320,11 +320,11 @@ enjoy_view() {
 continue_exploring() {
     echo "You continue exploring and find a hidden village with friendly inhabitants."
     echo -e "Do you:\n1. Spend time with the villagers\n2. Head back to the palace\n"
-    read -p "Choose an option (1/2): " choice3
+    read -p "Choose an option (1/2): " choice
 
-    if [ "$choice3" -eq 1 ]; then
+    if [ "$choice" -eq 1 ]; then
         spend_time_villagers
-    elif [ "$choice3" -eq 2 ]; then
+    elif [ "$choice" -eq 2 ]; then
         return_to_palace
     else
         echo "Invalid choice, try again."
