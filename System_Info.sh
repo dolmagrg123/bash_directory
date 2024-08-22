@@ -59,11 +59,13 @@ current_user(){
     echo "You are $current_user"
 
 }
-# cpu_information(){
+cpu_information(){
+    cpu_information=$( cat /proc/cpuinfo | grep processor | wc -l )
+    echo "The system has $cpu_information CPU"
 
-# }
+}
 # memory_information(){
-
+# free -m | awk 'NR==2{printf "%.2f%%", $3*100/$2 }'
 # }
 # memory_processes(){
 
