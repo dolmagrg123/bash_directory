@@ -381,7 +381,7 @@ ask_about_story() {
 
 suggest_leaving() {
     echo "You suggest leaving the area together. She agrees, and you walk back to the palace."
-    love_story
+    return_home
 }
 
 tell_name() {
