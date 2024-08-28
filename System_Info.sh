@@ -88,10 +88,11 @@ network_connectivity(){
 
     read -p "Enter a website or IP address to connect to: " address
     http_code=$(curl -s -o /dev/null -w "%{http_code}" $address)
-    time_connect=$(curl -s -o /dev/null -w "%{time_connect}" $address)
+    time_connect=$(curl -s -o /dev/null -w "%{time_connect}" $address | awk '{print $1 * 1000}')
+
     
     if [ "$http_code" == 200 ]; then
-        echo "It took ${time_connect}s to connect to $address successfully."
+        echo "It took ${time_connect}ms to connect to $address successfully."
     else
         echo "Failed to connect to $address. HTTP status code: $http_code."
     fi
