@@ -38,12 +38,13 @@ menu() {
     elif [ "$choice" == "5" ];then
         memory_processes
     elif [ "$choice" == "6" ];then
-        cpu_proccesses
+        cpu_processes
     elif [ "$choice" == "7" ];then
         network_connectivity
     else
         exit 0
     fi
+    replay
 
 }
 
@@ -64,18 +65,59 @@ cpu_information(){
     echo "The system has $cpu_information CPU"
 
 }
-# memory_information(){
-# free -m | awk 'NR==2{printf "%.2f%%", $3*100/$2 }'
-# }
-# memory_processes(){
+memory_information(){
 
-# }
-# cpu_proccesses(){
+total_memory=$(free -m | awk 'NR==2{print $2}')
+free_memory=$(free -m | awk 'NR==2{print $4}')
+echo "There is $free_memory Mebibyte unused memory of total $total_memory Mebibyte."
+}
 
-# }
-# network_connectivity(){
+memory_processes(){
+    echo "Top 5 Memory Processes:"
+    ps aux --sort=-%mem | awk '{print $4, $2, $11}' | head -6
 
-# }
+}
+
+cpu_processes(){
+
+    echo "Top 5 CPU Processes:"
+    ps aux --sort=-%cpu | awk '{print $3, $2, $11}' | head -6
+
+}
+network_connectivity(){
+
+    read -p "Enter a website or IP address to connect to: " address
+    http_code=$(curl -s -o /dev/null -w "%{http_code}" $address)
+    time_connect=$(curl -s -o /dev/null -w "%{time_connect}" $address)
+    
+    if [ "$http_code" == 200 ]; then
+        echo "It took ${time_connect}s to connect to $address successfully."
+    else
+        echo "Failed to connect to $address. HTTP status code: $http_code."
+    fi
+
+}
+
+replay(){
+
+    while true; do
+        echo "----------------------------------------"
+        echo "-----------------------------------------"
+        echo "                                         "
+        read -p "Would you like to see the menu again? (Y/N)" choice
+        echo "                                         "
+        if [[ "$choice" == "Y" || "$choice" == "y" ]];then
+            menu
+        else
+            echo "Exiting!!!, Have a Good Day"
+            exit 0
+        fi
+    done
+
+}
+
 
 menu
+
+
 
