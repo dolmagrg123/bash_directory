@@ -10,14 +10,8 @@ Use command-line arguments to specify the directory to organize.
 '
 #!/bin/bash
 
-# Check if the user provided a directory as an argument
-if [ -z "$1" ]; then
-  echo "Usage: $0 <directory>"
-  exit 1
-fi
-
-# Assign the directory to a variable
-DIR=$1
+echo "Enter a directory: "
+read DIR
 
 # Check if the provided argument is a valid directory
 if [ ! -d "$DIR" ]; then
