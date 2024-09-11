@@ -1,0 +1,21 @@
+total 3572
+drwxr-xr-x 3 ubuntu ubuntu    4096 Sep 11 19:41 .
+drwxr-x--- 8 ubuntu ubuntu    4096 Aug 28 01:13 ..
+drwxr-xr-x 8 ubuntu ubuntu    4096 Aug 28 01:36 .git
+-rw-r--r-- 1 ubuntu ubuntu    1283 Aug 28 01:25 README.md
+-rwxr-xr-x 1 ubuntu ubuntu    4005 Aug 28 01:35 System_Info.sh
+-rwxr-xr-x 1 ubuntu ubuntu   13032 Aug 22 04:49 adventure.sh
+-rw-r--r-- 1 ubuntu ubuntu    3766 Aug 22 02:41 calculator.sh
+-rwxr-xr-x 1 ubuntu ubuntu     259 Sep 11 19:27 case.sh
+-rwxr-xr-x 1 ubuntu ubuntu     326 Sep 11 19:12 conditional_statements.sh
+-rw-r--r-- 1 ubuntu ubuntu       0 Sep 11 19:41 file1.txt
+-rw-r--r-- 1 ubuntu ubuntu       0 Sep 11 19:41 file2.txt
+-rw-r--r-- 1 ubuntu ubuntu      80 Sep 11 19:07 hello.txt
+-rwxr-xr-x 1 ubuntu ubuntu     171 Sep 11 19:05 helloScript.sh
+-rwxr-xr-x 1 ubuntu ubuntu     224 Sep 11 19:39 input_script.sh
+-rw-r--r-- 1 ubuntu ubuntu     564 Aug 22 02:41 install_vs
+-rwxr-xr-x 1 ubuntu ubuntu    1215 Aug 22 02:41 log_script.sh
+-rwxr-xr-x 1 ubuntu ubuntu      43 Sep 11 19:40 output_script.sh
+-rwxr-xr-x 1 ubuntu ubuntu     968 Aug 22 02:41 permission_check.sh
+-rw-r--r-- 1 ubuntu ubuntu     140 Aug 22 02:41 script.sh
+-rw-r--r-- 1 ubuntu ubuntu 3573688 Aug 22 02:41 web-server-access-logs.log
