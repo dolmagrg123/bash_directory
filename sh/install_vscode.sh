@@ -20,5 +20,4 @@ echo "bind-addr: 0.0.0.0:8081
 auth: password
 password: abcd1234
 cert: false" > "$CONFIG_PATH"
-
 #to install vscode in a ubuntu machone
